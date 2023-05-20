@@ -57,7 +57,7 @@ const CommentsModal = ({ show, setShow, data, setData }) => {
       fetchComments();
     }
     dispatch(loaderStop());
-  }, [dispatch, refresh]);
+  }, [dispatch, refresh, logout, data]);
 
   const deleteComment = async (data) => {
     dispatch(loaderStart());

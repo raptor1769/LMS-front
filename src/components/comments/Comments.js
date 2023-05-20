@@ -46,7 +46,7 @@ const Comments = ({ videoOrAssignmentId, type }) => {
       fetchComments();
     }
     dispatch(loaderStop());
-  }, [videoOrAssignmentId, dispatch, refresh]);
+  }, [videoOrAssignmentId, dispatch, refresh, logout]);
 
   const handleSubmit = async (event) => {
     dispatch(loaderStart());
@@ -63,17 +63,13 @@ const Comments = ({ videoOrAssignmentId, type }) => {
       } else if ((type = "assignment")) {
         body.type = "assignment";
       }
-      const response = await axios.post(
-        `${process.env.REACT_APP_BACKEND}/comments`,
-        body,
-        {
-          headers: {
-            token: `Bearer ${
-              JSON.parse(localStorage.getItem("user")).accessToken
-            }`,
-          },
-        }
-      );
+      await axios.post(`${process.env.REACT_APP_BACKEND}/comments`, body, {
+        headers: {
+          token: `Bearer ${
+            JSON.parse(localStorage.getItem("user")).accessToken
+          }`,
+        },
+      });
       setCommentInput("");
       setRefresh(true);
     } catch (error) {

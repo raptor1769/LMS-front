@@ -13,7 +13,7 @@ const Recordings = ({ subject }) => {
   const [activeVideo, setActiveVideo] = useState(null);
   // const [refresh, setRefresh] = useState(true);
 
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
   const dispatch = useDispatch();
   const logout = useLogout();
@@ -101,9 +101,9 @@ const Recordings = ({ subject }) => {
             </>
           ) : (
             <div className="no-videos-section">
-              <div onClick={() => setShow(true)}>
-                <div>No videos found</div>
-              </div>
+              {/* <div onClick={() => setShow(true)}> */}
+              <div>No videos found</div>
+              {/* </div> */}
             </div>
           )}
         </div>

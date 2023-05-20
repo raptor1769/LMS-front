@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Recordings.scss";
-import { Button, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { loaderStart, loaderStop } from "../../../../redux/LoaderSlice";
 import axios from "axios";

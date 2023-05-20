@@ -69,32 +69,32 @@ const Assignments = ({ subject }) => {
     setShowDeleteModal(true);
   };
   // console.log(lastDate);
-  const handleUpdate = async () => {
-    dispatch(loaderStart());
-    const body = {
-      maxGrade: maxGrade,
-      lastDate: lastDate,
-    };
-    try {
-      await axios.put(
-        `${process.env.REACT_APP_BACKEND}/assignments/${activeAssignment._id}`,
-        body,
-        {
-          headers: {
-            token: `Bearer ${
-              JSON.parse(localStorage.getItem("user")).accessToken
-            }`,
-          },
-        }
-      );
-    } catch (err) {
-      console.log(err);
-    }
-    setSelectedAssignmentForm(false);
-    setRefresh(true);
-    setActiveAssignment(null);
-    dispatch(loaderStop());
-  };
+  // const handleUpdate = async () => {
+  //   dispatch(loaderStart());
+  //   const body = {
+  //     maxGrade: maxGrade,
+  //     lastDate: lastDate,
+  //   };
+  //   try {
+  //     await axios.put(
+  //       `${process.env.REACT_APP_BACKEND}/assignments/${activeAssignment._id}`,
+  //       body,
+  //       {
+  //         headers: {
+  //           token: `Bearer ${
+  //             JSON.parse(localStorage.getItem("user")).accessToken
+  //           }`,
+  //         },
+  //       }
+  //     );
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  //   setSelectedAssignmentForm(false);
+  //   setRefresh(true);
+  //   setActiveAssignment(null);
+  //   dispatch(loaderStop());
+  // };
 
   return (
     <div className="teacher-assignments">

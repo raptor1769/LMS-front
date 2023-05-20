@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import axios from "axios";
-import moment from "moment";
 import { hideAlert, showAlert } from "../../../../../redux/AlertSlice";
 import { loaderStart, loaderStop } from "../../../../../redux/LoaderSlice";
 import useLogout from "../../../../../custom/logout/Logout";
@@ -67,7 +66,7 @@ const UploadModal = ({
         }, 1000);
       }
     },
-    [dispatch, handleClose, setRefresh]
+    [dispatch, handleClose, setRefresh, assignment, setActiveAssignment]
   );
 
   useEffect(() => {

@@ -69,7 +69,7 @@ const Assignments = ({ subject }) => {
       getAssignmentStudentData();
     }
     dispatch(loaderStop());
-  }, [dispatch, logout, activeAssignment?._id, refresh]);
+  }, [dispatch, logout, activeAssignment, refresh]);
 
   useEffect(() => {
     dispatch(loaderStart());
