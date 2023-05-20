@@ -1,7 +1,6 @@
 import "./Home.scss";
 import Users from "./users/Users";
 import { useState } from "react";
-import { debounce } from "lodash";
 import Subjects from "./subjects/Subjects";
 import Recordings from "./recordings/Recordings";
 import Assignments from "./assignments/Assignments";
