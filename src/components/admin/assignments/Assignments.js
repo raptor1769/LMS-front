@@ -33,10 +33,11 @@ const Assignments = () => {
               setCommentsId(params?.data?._id);
               setShowCommentsModal(true);
             }}
-            className='assignment-title-link'>
+            className="assignment-title-link"
+          >
             {params?.data?.title}
             {"  "}
-            <i className='bi bi-box-arrow-up-right'></i>
+            <i className="bi bi-box-arrow-up-right"></i>
           </div>
         );
       },
@@ -69,7 +70,7 @@ const Assignments = () => {
       cellClass: "ag-cell-center capitalize-value",
       cellRenderer: (params) => {
         return (
-          <div className='assignment-teacher'>{params.data.subject.name}</div>
+          <div className="assignment-teacher">{params.data.subject.name}</div>
         );
       },
     },
@@ -80,7 +81,7 @@ const Assignments = () => {
       cellClass: "ag-cell-center capitalize-value",
       cellRenderer: (params) => {
         return (
-          <div className='assignment-teacher'>
+          <div className="assignment-teacher">
             {params.data.subject.teacher.name} ||{" "}
             {params.data.subject.teacher.email}
           </div>
@@ -113,11 +114,12 @@ const Assignments = () => {
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
         return (
-          <div className='assignments-action-container'>
+          <div className="assignments-action-container">
             <i
-              className='bi bi-trash3'
+              className="bi bi-trash3"
               style={{ color: "red", cursor: "pointer" }}
-              onClick={() => deleteAssignment(params.data)}></i>
+              onClick={() => deleteAssignment(params.data)}
+            ></i>
           </div>
         );
       },
@@ -152,7 +154,7 @@ const Assignments = () => {
     (params) => {
       dispatch(loaderStart());
       axios
-        .get("assignments/", {
+        .get(`${process.env.REACT_APP_BACKEND}/assignments/`, {
           headers: {
             token: `Bearer ${
               JSON.parse(localStorage.getItem("user")).accessToken
@@ -194,8 +196,8 @@ const Assignments = () => {
         />
       )}
 
-      <div className='users-example-wrapper'>
-        <div style={gridStyle} className='ag-theme-alpine'>
+      <div className="users-example-wrapper">
+        <div style={gridStyle} className="ag-theme-alpine">
           <AgGridReact
             ref={gridRef}
             rowHeight={60}
@@ -204,7 +206,7 @@ const Assignments = () => {
             defaultColDef={defaultColDef}
             rowSelection={"single"}
             onGridReady={onGridReady}
-            colResizeDefault='true'
+            colResizeDefault="true"
           />
         </div>
       </div>

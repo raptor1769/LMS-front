@@ -30,10 +30,11 @@ const Recordings = () => {
               setCommentsId(params?.data?._id);
               setShowCommentsModal(true);
             }}
-            className='recording-title-link'>
+            className="recording-title-link"
+          >
             {params?.data?.title}
             {"  "}
-            <i className='bi bi-box-arrow-up-right'></i>
+            <i className="bi bi-box-arrow-up-right"></i>
           </div>
         );
       },
@@ -66,7 +67,7 @@ const Recordings = () => {
       cellClass: "ag-cell-center capitalize-value",
       cellRenderer: (params) => {
         return (
-          <div className='recording-teacher'>
+          <div className="recording-teacher">
             {params.data.teacher.name} || {params.data.teacher.email}
           </div>
         );
@@ -79,7 +80,7 @@ const Recordings = () => {
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
         return (
-          <div className='recording-subject'>{params.data.subject.name}</div>
+          <div className="recording-subject">{params.data.subject.name}</div>
         );
       },
     },
@@ -103,11 +104,12 @@ const Recordings = () => {
       cellClass: "ag-cell-center",
       cellRenderer: (params) => {
         return (
-          <div className='users-action-container'>
+          <div className="users-action-container">
             <i
-              className='bi bi-trash3'
+              className="bi bi-trash3"
               style={{ color: "red", cursor: "pointer" }}
-              onClick={() => deleteRecording(params.data)}></i>
+              onClick={() => deleteRecording(params.data)}
+            ></i>
           </div>
         );
       },
@@ -146,7 +148,7 @@ const Recordings = () => {
     (params) => {
       dispatch(loaderStart());
       axios
-        .get("recordings/", {
+        .get(`${process.env.REACT_APP_BACKEND}/recordings/`, {
           headers: {
             token: `Bearer ${
               JSON.parse(localStorage.getItem("user")).accessToken
@@ -197,8 +199,8 @@ const Recordings = () => {
         />
       )}
 
-      <div className='users-example-wrapper'>
-        <div style={gridStyle} className='ag-theme-alpine'>
+      <div className="users-example-wrapper">
+        <div style={gridStyle} className="ag-theme-alpine">
           <AgGridReact
             ref={gridRef}
             rowHeight={60}
@@ -207,7 +209,7 @@ const Recordings = () => {
             defaultColDef={defaultColDef}
             rowSelection={"single"}
             onGridReady={onGridReady}
-            colResizeDefault='true'
+            colResizeDefault="true"
           />
         </div>
       </div>

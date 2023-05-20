@@ -135,7 +135,7 @@ const Subjects = () => {
     (params) => {
       dispatch(loaderStart());
       axios
-        .get("subjects/", {
+        .get(`${process.env.REACT_APP_BACKEND}/subjects/`, {
           headers: {
             token: `Bearer ${
               JSON.parse(localStorage.getItem("user")).accessToken
