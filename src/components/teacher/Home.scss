@@ -1,0 +1,110 @@
+@import "../../sass/mixin";
+@import "../../sass/variables";
+.teacher-home {
+  @extend %flexbox;
+  height: calc(100% - 100px);
+}
+
+.subjects-container {
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+  @extend %flexbox;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cards {
+  position: relative;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px solid $complementary;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  background: $white;
+  @include transition(all, 0.4s, ease-in-out);
+  .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.face1 {
+      box-sizing: border-box;
+      padding: 20px;
+      justify-content: flex-start;
+      padding-bottom: 100px;
+      h2 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .card {
+        &__heading,
+        &__para {
+          background-color: $black;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &__heading {
+          margin-bottom: 10px;
+          font-family: $bold_font-family_secondary;
+          font-weight: $bold_font-weight;
+        }
+        &__para {
+          margin-bottom: 0px;
+          font-family: $regular_font-family_secondary;
+          font-weight: $regular_font-weight;
+        }
+      }
+    }
+
+    &.face2 {
+      @include transition(all, 0.4s, ease-in-out);
+      @include linearGradient(-45deg, $secondary, $primary);
+      @extend %flexbox;
+      flex-flow: column;
+      color: #fff;
+      &::after {
+        content: "";
+        background-image: url("../../assets/circle.svg");
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+      }
+      h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 30px;
+        @include transition(all, 0.4s, ease-in-out);
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        margin-bottom: 10px;
+        font-family: $bold_font-family_secondary;
+        font-weight: $bold_font-weight;
+      }
+    }
+  }
+}
+
+.cards:hover {
+  @include box-shadow(0, 4px, 15px, 0, rgba($black, 0.75));
+  .face.face2 {
+    height: 100px;
+    padding: 10px;
+    h2 {
+      font-size: 18px;
+    }
+  }
+}

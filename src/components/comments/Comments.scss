@@ -1,0 +1,78 @@
+@import "../../sass/mixin";
+@import "../../sass/variables";
+.comments-container {
+    background-color: $white;
+    margin-top: 15px;
+    padding: 15px;
+}
+
+.comments-container h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comments-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid $border;
+    li {
+        padding: 10px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid $border;
+        }
+    }
+}
+
+.comments-container li strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comments-container form {
+    margin-top: 20px;
+}
+
+.comments-container form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.comments-container form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.comments-container form button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comments-container form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.comments {
+    text-decoration: underline;
+    text-underline-position: under;
+    cursor: pointer;
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-top: 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}

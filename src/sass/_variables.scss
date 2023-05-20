@@ -1,0 +1,42 @@
+$black: #000000;
+$white: #ffffff;
+$primary: #9a55ff;
+$secondary: #da8cff;
+$complementary: #c3bdbd;
+$default: #4d4d4d;
+$red: red;
+$gray: gray;
+$font-color: #fefefe;
+$border: #ebedf2;
+$transparent: transparent;
+
+//Media Break-points
+$media-mobile-small-320: 320px;
+$media-mobile-ex-small: 360px;
+$media-mobile-med: 375px;
+$media-mobile-small-max: 480px;
+$media-mobile-max: 767px;
+$media-tablet-min: 768px;
+$media-tablet-max: 992px;
+$media-desktop-min: 1024px;
+$media-desktop-max: 1200px;
+$media-laptop-max: 1366px;
+$media-ex-large-min: 1367px;
+$media-ex-large-max: 1441px;
+$media-ex-large-hd-max: 1601px;
+$media-xxlarge: 1900px;
+$media-xxlarge-min: 2000px;
+
+//Hidden Class
+$web-hidden: none;
+$mobile-hidden: none;
+
+$light_font-family_secondary: "Roboto", sans-serif;
+$regular_font-family_secondary: "Roboto", sans-serif;
+$medium_font-family_secondary: "Roboto", sans-serif;
+$bold_font-family_secondary: "Roboto", sans-serif;
+
+$light_font-weight: 300;
+$regular_font-weight: 400;
+$medium_font-weight: 500;
+$bold_font-weight: 700;

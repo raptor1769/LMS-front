@@ -1,0 +1,5 @@
+{
+  "admin": ["Users", "Subjects", "Assignments"],
+  "student": ["Subjects", "Assignments", "Profile", "Recordings"],
+  "teacher": ["Students", "Assigments", "Subjects", "Uploads"]
+}

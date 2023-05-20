@@ -1,0 +1,66 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variables";
+.page-heading {
+  @extend %flexbox;
+  justify-content: center;
+}
+
+.ag-header-cell-label {
+  justify-content: center;
+}
+
+.admin-home .ag-cell-center {
+  text-align: center;
+  @extend %flexbox;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-home .capitalize-value {
+  text-transform: capitalize;
+}
+
+.user-grid-verified {
+  background-color: green;
+  color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.user-grid-not-verified {
+  background-color: red;
+  color: white;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.users-action-container {
+  @extend %flexbox;
+  justify-content: space-between;
+  margin: auto;
+  width: 40%;
+}
+
+.users-action-container i {
+  font-size: 16px;
+}
+
+.users-example-wrapper {
+  @extend %flexbox;
+  flex-direction: column;
+  min-height: 83vh;
+  height: 100%;
+}
+
+#myGrid {
+  flex: 1 1 0px;
+  width: 100%;
+}
+
+.example-header {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-size: 13px;
+  margin-bottom: 5px;
+}

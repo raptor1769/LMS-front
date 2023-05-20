@@ -1,0 +1,63 @@
+@import "../../sass/variables";
+@import "../../sass/mixin";
+
+.nav-bar {
+    width: 100%;
+    @extend %flexbox;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: $primary;
+    color: $white;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.menu-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.nav-bar p {
+    margin: 0;
+}
+
+.navbar-right-container {
+    @extend %flexbox;
+    width: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown {
+    border-radius: 50% !important;
+}
+
+.dropdown-menu {
+    background: #dfdfdf;
+    color: $black !important;
+    z-index: 7000 !important;
+}
+.dropdown {
+    .dropdown-toggle {
+        border-radius: 50% !important;
+        width: 35px;
+        height: 35px;
+        padding: 0 !important;
+        background-color: #ee6b00 !important;
+        font-size: 20px !important;
+        border: none;
+    }
+}
+
+.dropdown-toggle::after {
+    content: none !important;
+}
+
+.logo-name {
+    cursor: pointer;
+}
+
+.home-button {
+    cursor: pointer;
+}

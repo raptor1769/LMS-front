@@ -1,0 +1,46 @@
+@import "./sass/_fonts.scss";
+@import "./sass/_variables.scss";
+@import "./sass/_mixin.scss";
+.App {
+    min-height: 100vh;
+    position: relative;
+    background: #f2edf3;
+}
+
+.app-alert-bar {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 3000;
+}
+
+.app-alert-bar .alert {
+    width: 20% !important;
+    text-align: center;
+    margin: 20px auto 10px !important;
+}
+
+.example-wrapper {
+    height: 70%;
+}
+.ag-theme-alpine {
+    .ag-header-row {
+        @include linearGradient(-45deg, $secondary, $primary);
+        color: $white !important;
+    }
+    .ag-row-odd {
+        background: rgba($black, 0.05);
+    }
+}
+.btn {
+    &.btn {
+        &-primary {
+            background: $primary !important;
+            border: none;
+            color: $white;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

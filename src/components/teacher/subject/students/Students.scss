@@ -1,0 +1,8 @@
+@import "../../../../sass/mixin";
+@import "../../../../sass/variables";
+.students-example-wrapper {
+  @extend %flexbox;
+  flex-direction: column;
+  min-height: 66vh;
+  height: 100%;
+}

@@ -1,0 +1,39 @@
+.error-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    object-fit: cover;
+}
+
+
+.error-container .page-not-found {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5) url('./pexels-miguel-á-padriñán-255379.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.error-container h1 {
+    font-size: 3rem;
+    color: #8a2be2;
+}
+
+.error-container p {
+    font-size: 1.5rem;
+    color: #4b0082;
+}
+
+.error-container .back-to-home {
+    background-image: linear-gradient(to right, #905ee2, #6c3fb7);
+    border-color: #6c3fb7;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+}
+
+.error-container .back-to-home:hover {
+    background-image: linear-gradient(to right, #6c3fb7, #4b0082);
+    border-color: #4b0082;
+}

@@ -1,0 +1,66 @@
+@import "../../../../sass/mixin";
+@import "../../../../sass/variables";
+.recordings-container {
+  width: 100%;
+  height: 100%;
+  @extend %flexbox;
+  justify-content: space-between;
+}
+
+.recordings-left-section {
+  width: 25%;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 82vh;
+  span {
+    font-size: 25px;
+    font-family: $bold_font-family_secondary;
+    font-weight: $bold_font-weight;
+    border-bottom: 1px solid $border;
+    margin-bottom: 10px;
+    display: block;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      height: 46px;
+      @extend %flexbox;
+      align-items: center;
+      justify-content: space-between;
+      span {
+        cursor: pointer;
+        font-size: 14px;
+        font-family: $regular_font-family_secondary;
+        font-weight: $regular_font-weight;
+        border-bottom: none;
+        margin-bottom: 0px;
+        &:first-child {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid $border;
+      }
+    }
+  }
+}
+
+.recording-right-section {
+  width: 70%;
+  @extend %flexbox;
+  flex-direction: column;
+}
+
+.recording-right-section .no-videos-section {
+  @extend %flexbox;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

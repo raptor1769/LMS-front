@@ -1,0 +1,63 @@
+@import "../../../sass/mixin";
+@import "../../../sass/variables";
+.subject-name-grid {
+  cursor: pointer;
+  color: darkblue;
+}
+
+.subject-name-grid span:hover {
+  text-decoration: underline;
+}
+
+.subject-details-modal .modal-header {
+  padding: 0 !important;
+  @include linearGradient(-45deg, $secondary, $primary);
+}
+.subject-details-modal .ag-theme-alpine {
+  height: calc(100% - 38px);
+}
+.subject-details-modal .ag-header-cell-left .ag-header-cell-label {
+  justify-content: flex-start;
+}
+.subject-details-title {
+  width: 100% !important;
+  color: white !important;
+}
+
+.subject-details-modal .subject-details-name {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.subject-details-modal .subject-details-grade {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.subject-details-modal .subject-details-professor {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.subjects-example-wrapper {
+  @extend %flexbox;
+  flex-direction: column;
+  min-height: 83vh;
+  height: 100%;
+}
+
+.studentsGrid-wrapper {
+  height: 100%;
+}
+
+.add-subject {
+  width: 100%;
+  @extend %flexbox;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.add-subject-button {
+  background-color: $primary !important;
+  color: $white !important;
+}

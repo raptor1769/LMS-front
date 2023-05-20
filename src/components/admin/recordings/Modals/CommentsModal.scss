@@ -1,0 +1,68 @@
+.comments-container-modal {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.comments-modal {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+.comments-container-modal h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comments-container-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-container-modal li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comments-container-modal li strong {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comments-container-modal form {
+    margin-top: 20px;
+}
+
+.comments-container-modal form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.comments-container-modal form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.comments-container-modal form button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comments-container-modal form button[type="submit"]:hover {
+    background-color: #3e8e41;
+}
