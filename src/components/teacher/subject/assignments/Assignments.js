@@ -18,9 +18,9 @@ const Assignments = ({ subject }) => {
   const [refresh, setRefresh] = useState(true);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [deleteData, setDeleteData] = useState({});
-  const [selectedAssignmentForm, setSelectedAssignmentForm] = useState(false);
-  const [maxGrade, setMaxGrade] = useState(0);
-  const [lastDate, setLastDate] = useState("");
+  // const [selectedAssignmentForm, setSelectedAssignmentForm] = useState(false);
+  // const [maxGrade, setMaxGrade] = useState(0);
+  // const [lastDate, setLastDate] = useState("");
 
   const [studentsModal, setStudentsModal] = useState(false);
 
@@ -129,8 +129,8 @@ const Assignments = ({ subject }) => {
                     key={item._id}
                     onClick={() => {
                       setActiveAssignment(item);
-                      setMaxGrade(item?.maxGrade);
-                      setLastDate(moment(item?.lastDate).format("YYYY-MM-DD"));
+                      // setMaxGrade(item?.maxGrade);
+                      // setLastDate(moment(item?.lastDate).format("YYYY-MM-DD"));
                     }}
                     className="assignments-list-item"
                   >

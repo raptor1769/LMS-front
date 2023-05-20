@@ -35,13 +35,6 @@ const AddStundentsGrid = ({
   ];
 
   const containerStyle = useMemo(() => ({ width: "100%", height: "50vh" }), []);
-  const gridStyle = useMemo(
-    () => ({
-      height: "100%",
-      width: "100%",
-    }),
-    []
-  );
   const defaultColDef = useMemo(() => {
     return {
       flex: 1,

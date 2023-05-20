@@ -16,12 +16,12 @@ const Assignments = ({ subject }) => {
   const [studentAssignmentData, setStudentAssignmentData] = useState(null);
   const [refresh, setRefresh] = useState(true);
   const [studentRefresh, setStudentRefresh] = useState(true);
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [deleteData, setDeleteData] = useState({});
-  const [maxGrade, setMaxGrade] = useState(0);
-  const [lastDate, setLastDate] = useState("");
+  // const [showDeleteModal, setShowDeleteModal] = useState(false);
+  // const [deleteData, setDeleteData] = useState({});
+  // const [maxGrade, setMaxGrade] = useState(0);
+  // const [lastDate, setLastDate] = useState("");
 
-  const [studentsModal, setStudentsModal] = useState(false);
+  // const [studentsModal, setStudentsModal] = useState(false);
 
   const [show, setShow] = useState(false);
 
@@ -143,6 +143,7 @@ const Assignments = ({ subject }) => {
           setShow={setShow}
           assignment={activeAssignment._id}
           setRefresh={setStudentRefresh}
+          refresh={studentRefresh}
           subject={subject.name}
           setActiveAssignment={setActiveAssignment}
         />
@@ -159,8 +160,8 @@ const Assignments = ({ subject }) => {
                     key={item._id}
                     onClick={() => {
                       setActiveAssignment(item);
-                      setMaxGrade(item?.maxGrade);
-                      setLastDate(moment(item?.lastDate).format("YYYY-MM-DD"));
+                      // setMaxGrade(item?.maxGrade);
+                      // setLastDate(moment(item?.lastDate).format("YYYY-MM-DD"));
                     }}
                     className="assignments-list-item"
                   >
