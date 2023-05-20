@@ -26,7 +26,7 @@ const SubjectEditModal = ({
   useEffect(() => {
     dispatch(loaderStart());
     axios
-      .get("users?type=teacher", {
+      .get(`${process.env.REACT_APP_BACKEND}/users?type=teacher`, {
         headers: {
           token: `Bearer ${
             JSON.parse(localStorage.getItem("user")).accessToken
