@@ -11,9 +11,6 @@
 # build
 /build
 
-# env
-.env
-
 # production
 /build
 
